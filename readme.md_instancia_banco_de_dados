@@ -1,0 +1,28 @@
+O objetivo aqui é criar uma instância gerenciada do Azure SQL. Isso é algo como ter um servidor de banco de dados na nuvem, mas sem a necessidade de configurar o servidor do zero.
+
+Para quem quiser seguir junto, usei como base um guia da própria Microsoft: Criar uma Instância Gerenciada de SQL do Azure (Portal do Azure)
+
+#Meu passo a passo para criar a instância gerenciada de SQL
+
+##1. Entrando no Portal do Azure
+É só acessar portal.azure.com e fazer login.
+
+##2. Começando a criar o banco de dados
+Após acessar o portal, tem uma barra de pesquisa lá em cima. É só buscar por "instância gerenciada SQL" e clicar na opção que aparecer. Aí aparece uma tela com as instâncias. Como não havia nenhuma foi necessário criar uma nova (opção "Criar").
+
+##3. Configurações iniciais
+Aqui é onde a gente começa a dar "nome" e "endereço" para o nosso banco de dados.
+
+Grupo de Recursos: Pense nisso como uma pasta para organizar seus projetos. Se você não tem um, clique em "criar novo" e dê um nome pra ele (ex: test-db).
+Nome da instância: É o nome do servidor de banco de dados. Tem que ser único dentro do Azure.
+Região: Onde o seu banco de dados vai estar fisicamente no mundo. É bom escolher uma região perto de você ou dos seus usuários para ser mais rápido.
+Tipo de Computação + Armazenamento: Essa parte é importante! Aqui você escolhe o "tamanho" do banco de dados.
+Tipo de serviço: Eu escolhi Uso Geral. É o mais comum para começar e para a maioria dos usos. O "Business Critical" é para coisas super importantes, mas é mais caro.
+Geração de Hardware: Deixei no padrão.
+vCores: Quanto mais vCores, mais rápido, mas também mais caro.
+Armazenamento: É o espaço que o banco de dados vai ter para guardar informações. Deixei o padrão também.
+Custo Estimado Mensal: O Azure mostra uma estimativa. É bom ficar de olho nisso para não ter surpresas!
+
+Após tudo isso, eu cliquei em revisar + criar.
+
+Observação para o Futuro: Preciso lembrar de apagar essa instância de banco de dados quando eu não estiver mais usando para não gerar custos desnecessários! A lição é sempre verificar os recursos ativos.
